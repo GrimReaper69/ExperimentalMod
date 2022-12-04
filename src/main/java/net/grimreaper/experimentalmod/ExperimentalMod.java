@@ -1,6 +1,7 @@
 package net.grimreaper.experimentalmod;
 
 import com.mojang.logging.LogUtils;
+import net.grimreaper.experimentalmod.item.Items;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -13,14 +14,13 @@ import org.slf4j.Logger;
 
 @Mod(ExperimentalMod.MOD_ID)
 public class ExperimentalMod {
-    public static final String MOD_ID = "ExperimentalMod";
+    public static final String MOD_ID = "experimentalmod";
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public ExperimentalMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-
         modEventBus.addListener(this::commonSetup);
-
+        Items.register(modEventBus);
         MinecraftForge.EVENT_BUS.register(this);
     }
 
