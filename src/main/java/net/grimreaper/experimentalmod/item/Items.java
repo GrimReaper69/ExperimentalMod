@@ -10,9 +10,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class Items {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, ExperimentalMod.MOD_ID);
-    public static final RegistryObject<Item> testitem = ITEMS.register("testitem", () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+    public static final RegistryObject<Item> ruby = ITEMS.register("ruby", () -> new Item(new Item.Properties().tab(ExperimentalTab.EXPERIMENTAL_TAB)));
 
-    public static void register(IEventBus iEventBus) {
-        ITEMS.register(iEventBus);
-    }
+    public static void register(IEventBus iEventBus) {ITEMS.register(iEventBus);}
 }

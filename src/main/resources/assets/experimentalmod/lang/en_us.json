@@ -1,3 +1,7 @@
 {
-  "item.experimentalmod.testitem": "Test Item"
+  "item.experimentalmod.ruby": "Ruby",
+  "block.experimentalmod.ruby_ore": "Ruby Ore",
+  "block.experimentalmod.ruby_block": "Ruby Block",
+  "block.experimentalmod.deepslate_ruby_ore": "Deepslate Ruby Ore",
+  "itemGroup.experimental_tab": "Experimental Tab"
 }

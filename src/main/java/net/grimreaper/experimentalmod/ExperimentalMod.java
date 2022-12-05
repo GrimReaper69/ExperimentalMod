@@ -2,6 +2,7 @@ package net.grimreaper.experimentalmod;
 
 import com.mojang.logging.LogUtils;
 import net.grimreaper.experimentalmod.item.Items;
+import net.grimreaper.experimentalmod.item.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -21,6 +22,7 @@ public class ExperimentalMod {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::commonSetup);
         Items.register(modEventBus);
+        Blocks.register(modEventBus);
         MinecraftForge.EVENT_BUS.register(this);
     }
 
